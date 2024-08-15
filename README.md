@@ -1,2 +1,1 @@
-# Capstone_Front_End
-Front-End Developer Capstone
+# Capstone Project Front-End Developer
