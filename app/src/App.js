@@ -7,14 +7,14 @@ import Footer from  './components/Footer'
 function App() {
   return (
     <>
-    {/* Header section */}
-    <Header />
-    {/* Navigation section */}
-    <Nav />
-    {/* Main section */}
-    <Main />
-    {/* Footer section */}
-    <Footer />
+      {/* Header section */}
+      <Header />
+      {/* Navigation section */}
+      <Nav />
+      {/* Main section */}
+      <Main />
+      {/* Footer section */}
+      <Footer />
     </>
   );
 }
