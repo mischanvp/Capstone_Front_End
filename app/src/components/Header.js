@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../pics/Logo.svg'
+import '../style.css'
 
 function Header() {
     return (

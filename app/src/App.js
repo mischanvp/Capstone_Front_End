@@ -7,10 +7,12 @@ import Footer from  './components/Footer'
 function App() {
   return (
     <>
-      {/* Header section */}
-      <Header />
-      {/* Navigation section */}
-      <Nav />
+      <header className="nav-header">
+        {/* Header section */}
+        <Header />
+        {/* Navigation section */}
+        <Nav />
+      </header>
       {/* Main section */}
       <Main />
       {/* Footer section */}

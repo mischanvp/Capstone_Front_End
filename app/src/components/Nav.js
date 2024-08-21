@@ -1,8 +1,9 @@
 import React from 'react'
+import '../style.css'
 
 function Nav() {
     return (
-    <ul>
+    <ul class='nav-list'>
         <li><a href="#home">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Menu">Menu</a></li>

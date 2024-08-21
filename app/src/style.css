@@ -1,0 +1,41 @@
+* {
+    padding: 0; /* Set default padding to 0 */
+    margin: 0; /* Set default margin to 0 */
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: space-evenly; /* Space out the items evenly */
+    background-color: white;      /* Set background color for the nav */
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1366px;    /* Set a max-width for the container */
+}
+
+.nav-list {
+    display: flex;
+    flex-flow: row wrap; /* Wraps along rows when size too small */
+    list-style-type: none;       /* Remove bullet points from the list */
+    justify-content: space-evenly; /* Space out the items evenly */
+    background-color: white;      /* Set background color for the nav */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.nav-list a {
+    text-decoration: none; /* Not underlining links */
+    color: black;
+    padding: 5px;
+}
+
+.nav-list a:hover {
+    background-color: rgb(73, 94, 87);
+    border-radius: 4px;
+    color: white;
+}
+
+img {
+    width: 100%;                 /* Make the image take up 100% of its grid area */
+    height: auto;                /* Maintain the aspect ratio */
+}
