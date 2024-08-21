@@ -6,7 +6,7 @@
 .site-container {
     margin: 0 auto; /* Center the content */
     max-width: 1200px; /* Set a maximum width */
-    padding: 10px 20px; /* Add more padding on larger screens */
+    padding: 10px 20px; 
 }
 
 /* Styles for desktop screens */
@@ -165,7 +165,8 @@ p {
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
     background-color: white;      /* Set background color for the nav */
-    font-size: 16px;
+    font-size: 12px;
+    margin: 0 20px; /* Center the content */
 }
 
 .footer-nav-list {
