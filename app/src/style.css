@@ -3,6 +3,37 @@
     margin: 0; /* Set default margin to 0 */
 }
 
+.site-container {
+    margin: 0 auto; /* Center the content */
+    max-width: 1200px; /* Set a maximum width */
+    padding: 10px 20px; /* Add more padding on larger screens */
+}
+
+/* Styles for desktop screens */
+@media (min-width: 1024px) {
+    .site-container {
+        margin: 0 auto; /* Center the content */
+        max-width: 1200px; /* Set a maximum width */
+        padding: 10 40px; /* Add more padding on larger screens */
+    }
+}
+
+.button-1 {
+    background-color: rgb(244, 206, 30); /* Light gray background */
+    color: black;
+    padding: 10px 20px; /* Button padding */
+    font-size: 18px; /* Font size */
+    border-radius: 16px; /* Slightly rounded corners */
+    width: 100%; /* Optional: Make it full width */
+    max-width: 200px; /* Optional: Limit max width */
+}
+
+.button-1:hover {
+    background-color: rgb(73, 94, 87);
+    border-radius: 16px;
+    color: white;
+}
+
 .nav-header {
     display: grid;
     grid-template-columns: 25% 75%;
@@ -10,7 +41,6 @@
     background-color: white;      /* Set background color for the nav */
     align-items: center;
     padding: 0 20px;
-    max-width: 1366px;    /* Set a max-width for the container */
 }
 
 .nav-list {
@@ -26,16 +56,135 @@
 .nav-list a {
     text-decoration: none; /* Not underlining links */
     color: black;
-    padding: 5px;
+    padding: 10px 10px;
 }
 
 .nav-list a:hover {
     background-color: rgb(73, 94, 87);
-    border-radius: 4px;
+    border-radius: 16px;
     color: white;
 }
 
-img {
+.pic-logo {
     width: 100%;                 /* Make the image take up 100% of its grid area */
     height: auto;                /* Maintain the aspect ratio */
+}
+
+main {
+    display: flex;
+    flex-direction: column;      /* Stack sections vertically */
+    gap: 20px;                   /* Add space between sections */
+    padding: 20px;               /* Add padding inside the main container */
+}
+
+h2 {
+    margin-top: 0;               /* Remove top margin to tighten spacing */
+}
+
+p {
+    margin-bottom: 10px;            /* Remove bottom margin to tighten spacing */
+}
+
+.section-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: white;      /* Set background color for the nav */
+    margin-bottom: 20px;
+}
+
+.section-1-pic{
+    max-width: 100%;   /* Set a maximum width for the image */
+    height: auto;       /* Maintain aspect ratio */
+    margin-top: 10px;   /* Add space above the image */
+    margin-left: 30px;   /* Add space left to the image */
+    margin-bottom: 20px; /* Add space below the image */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+    justify-self: center;
+}
+
+.section-1-text {
+    display:flex;
+    flex-direction: column;
+    background-color: white;      /* Set background color for the nav */
+}
+
+.section-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;      /* Set background color for the nav */
+    margin-bottom: 20px;
+}
+
+.section-2-header {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    background-color: white;      /* Set background color for the nav */
+    margin-bottom: 20px;
+}
+
+.section-2-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;      /* Set background color for the nav */
+}
+
+.section-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;      /* Set background color for the nav */
+    margin-bottom: 20px;
+}
+
+.section-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;      /* Set background color for the nav */
+    margin-bottom: 20px;
+}
+
+.section-4-text {
+    display:flex;
+    flex-direction: column;
+    background-color: white;      /* Set background color for the nav */
+    margin-top: 20px;   /* Add space above the image */
+    margin-bottom: 20px; /* Add space below the image */
+
+}
+
+.section-4-pic{
+    max-width: 100%;   /* Set a maximum width for the image */
+    height: auto;       /* Maintain aspect ratio */
+    margin-left: 30px;   /* Add space left to the image */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+    justify-self: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    background-color: white;      /* Set background color for the nav */
+    font-size: 16px;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-flow: column; /* Wraps along rows when size too small */
+    list-style-type: none;       /* Remove bullet points from the list */
+    justify-content: space-evenly; /* Space out the items evenly */
+    background-color: white;      /* Set background color for the nav */
+    text-decoration: none;
+}
+
+.footer-nav-list a {
+    text-decoration: none; /* Not underlining links */
+    color: black;
+    padding: 2px 2px;
+}
+
+.footer-nav-list a:hover {
+    background-color: rgb(73, 94, 87);
+    border-radius: 16px;
+    color: white;
 }

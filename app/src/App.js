@@ -6,7 +6,7 @@ import Footer from  './components/Footer'
 
 function App() {
   return (
-    <>
+    <div className="site-container">
       <header className="nav-header">
         {/* Header section */}
         <Header />
@@ -17,7 +17,7 @@ function App() {
       <Main />
       {/* Footer section */}
       <Footer />
-    </>
+    </div>
   );
 }
 

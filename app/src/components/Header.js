@@ -4,7 +4,7 @@ import '../style.css'
 
 function Header() {
     return (
-    <img src={Logo} alt="Little Lemon Logo" style={{ height: '50px' }} />
+    <img src={Logo} alt="Little Lemon Logo" className="pic-logo" />
     )
 }
 
