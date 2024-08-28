@@ -6,26 +6,31 @@
 .site-container {
     margin: 0 auto; /* Center the content */
     max-width: 1200px; /* Set a maximum width */
-    padding: 10px 20px; 
-}
-
-/* Styles for desktop screens */
-@media (min-width: 1024px) {
-    .site-container {
-        margin: 0 auto; /* Center the content */
-        max-width: 1200px; /* Set a maximum width */
-        padding: 10 40px; /* Add more padding on larger screens */
-    }
 }
 
 .button-1 {
     background-color: rgb(244, 206, 30); /* Light gray background */
     color: black;
-    padding: 10px 20px; /* Button padding */
-    font-size: 18px; /* Font size */
+    padding: 8px 16px; /* Button padding */
+    font-size: 14px; /* Font size */
+    font-weight: bold;
     border-radius: 16px; /* Slightly rounded corners */
     width: 100%; /* Optional: Make it full width */
-    max-width: 200px; /* Optional: Limit max width */
+    max-width: 150px; /* Optional: Limit max width */
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .button-1 {
+        background-color: rgb(244, 206, 30); /* Light gray background */
+        color: black;
+        padding: 10px 20px; /* Button padding */
+        font-size: 16px; /* Font size */
+        border-radius: 16px; /* Slightly rounded corners */
+        width: 100%; /* Optional: Make it full width */
+        max-width: 200px; /* Optional: Limit max width */
+        font-family: 'Karla Regular';
+    }
 }
 
 .button-1:hover {
@@ -40,7 +45,7 @@
     justify-content: space-evenly; /* Space out the items evenly */
     background-color: white;      /* Set background color for the nav */
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .nav-list {
@@ -57,6 +62,21 @@
     text-decoration: none; /* Not underlining links */
     color: black;
     padding: 10px 10px;
+    font-family: 'Karla Regular';
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .nav-list a {
+        text-decoration: none; /* Not underlining links */
+        color: black;
+        padding: 10px 10px;
+        font-family: 'Karla Regular';
+        font-weight: bold;
+        font-size: 16px;
+    }
 }
 
 .nav-list a:hover {
@@ -74,39 +94,143 @@ main {
     display: flex;
     flex-direction: column;      /* Stack sections vertically */
     gap: 20px;                   /* Add space between sections */
-    padding: 20px;               /* Add padding inside the main container */
 }
 
-h2 {
-    margin-top: 0;               /* Remove top margin to tighten spacing */
+h1 {
+    font-size: 32px;
+    color: #F4CE14;
+    margin: 0;
+    font-family: 'Markazi Text';
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 40px;
+        color: #F4CE14;
+        margin: 0;
+        font-family: 'Markazi Text';
+    }
 }
 
 p {
+    font-size: 14px;
+    color: black;
+    margin: 0;
     margin-bottom: 10px;            /* Remove bottom margin to tighten spacing */
+    font-family: 'Karla Regular';
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    p {
+        font-size: 16px;
+        color: black;
+        margin: 0;
+        margin-bottom: 10px;            /* Remove bottom margin to tighten spacing */
+        font-family: 'Karla Regular';
+    }
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Markazi Text';
+    margin-top: 0;               /* Remove top margin to tighten spacing */
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    h2 {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 5px;
+        font-family: 'Markazi Text';
+        margin-top: 0;               /* Remove top margin to tighten spacing */
+    }
 }
 
 .section-1 {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    background-color: white;      /* Set background color for the nav */
+    grid-template-columns: 2.5fr 1.5fr;
+    background-color: rgb(73, 94, 87);      /* Set background color for the nav */
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .section-1-pic{
-    max-width: 100%;   /* Set a maximum width for the image */
+    max-width: 80%;   /* Set a maximum width for the image */
     height: auto;       /* Maintain aspect ratio */
-    margin-top: 10px;   /* Add space above the image */
-    margin-left: 30px;   /* Add space left to the image */
-    margin-bottom: 20px; /* Add space below the image */
-    border-radius: 10px; /* Optional: add rounded corners to the image */
+    margin-top: 20px;   /* Add space above the image */
+    border-radius: 16px; /* Optional: add rounded corners to the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
     justify-self: center;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-1-pic{
+        max-width: 60%;   /* Set a maximum width for the image */
+        height: auto;       /* Maintain aspect ratio */
+        border-radius: 16px; /* Optional: add rounded corners to the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        justify-self: center;
+        margin-right: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .section-1-text {
     display:flex;
     flex-direction: column;
-    background-color: white;      /* Set background color for the nav */
+    margin-left: 30px;
+}
+
+.section-1-text h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+    font-family: 'Markazi Text';
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-1-text h1 {
+        margin-top: 10px;
+    }
+}
+
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-1-text h2 {
+        font-size: 24px;
+        color: white;
+        font-family: 'Markazi Text';
+    }
+}
+
+.section-1-text p {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Karla Regular';
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-1-text p {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        font-family: 'Karla Regular';
+        margin-bottom: 60px;
+    }
 }
 
 .section-2{
@@ -114,6 +238,7 @@ p {
     grid-template-columns: 1fr;
     background-color: white;      /* Set background color for the nav */
     margin-bottom: 20px;
+    padding: 10px 20px;
 }
 
 .section-2-header {
@@ -123,10 +248,100 @@ p {
     margin-bottom: 20px;
 }
 
-.section-2-text {
+.section-2-header h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Markazi Text';
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-2-header h2 {
+        font-size: 40px;
+        color: black;
+        font-family: 'Markazi Text';
+    }
+}
+
+.section-2-panels {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     background-color: white;      /* Set background color for the nav */
+    gap: 20px;
+}
+
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-2-panels {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        background-color: white;      /* Set background color for the nav */
+        gap: 20px;
+    }
+}
+.section-2-panel {
+    background-color: rgba(73, 94, 87, 0.2);  /* Light gray background */
+    border-radius: 16px;  /* Rounded corners */
+    overflow: hidden;  /* Ensure the image doesn't overflow the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add a subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-2-panel-img {
+    width: 100%;  /* Ensure the image covers the full width of the panel */
+    height: auto;
+    border-top-left-radius: 16px;  /* Rounded corners on the top */
+    border-top-right-radius: 16px;
+    height: 180px;  /* Set a fixed height for all images */
+}
+
+.section-2-panel-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-2-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.section-2-panel-price {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: 'Karla Regular';
+}
+
+.section-2-panel-title {
+    font-size: 14px;
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.section-2-panel-text {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;            /* Remove bottom margin to tighten spacing */
+    font-family: 'Karla Regular';
+}
+
+.section-2-panel-delivery {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;  /* Space between the text above and the delivery section */
+    font-size: 14px;  /* Adjust font size if needed */
+    color: black;  /* Text color */
+    font-family: 'Karla Regular';
+    font-weight: bold;
 }
 
 .section-3 {
@@ -134,39 +349,190 @@ p {
     grid-template-columns: 1fr;
     background-color: white;      /* Set background color for the nav */
     margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.section-3-testimonials-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;  /* Space between panels */
+    background-color: white;
+}
+
+/* Styles for small desktop screens */
+@media (min-width: 600px) {
+    .section-3-testimonials-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;  /* Space between panels */
+        background-color: white;
+    }
+}
+
+/* Styles for desktop screens */
+@media (min-width: 900px) {
+    .section-3-testimonials-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;  /* Space between panels */
+        background-color: white;
+    }
+}
+
+.section-3-testimonial-panel {
+    background-color: rgba(73, 94, 87, 0.4);
+    border-radius: 16px;  /* Rounded corners */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-3-testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;  /* Space between the header and quote */
+}
+
+.section-3-testimonial-img {
+    width: 60px;  /* Fixed size for profile pictures */
+    height: 60px;
+    border-radius: 50%;  /* Make the image circular */
+    margin-right: 16px;  /* Space between the image and profile text */
+}
+
+.section-3-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-3-stars {
+    font-size: 18px;  /* Size for the star rating */
+    color: rgb(244, 206, 30);
+    margin-bottom: 4px;
+}
+
+.section-3-profile-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Karla Regular';
+}
+
+.section-3-testimonial-quote {
+    font-style: italic;
+    margin-top: 4px;  /* Space above the quote */
+    font-size: 14px;
+    color: black;
+    font-family: 'Karla Regular';
 }
 
 .section-4 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     background-color: white;      /* Set background color for the nav */
     margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;      /* Set background color for the nav */
+        margin-bottom: 20px;
+    }
 }
 
 .section-4-text {
     display:flex;
     flex-direction: column;
     background-color: white;      /* Set background color for the nav */
-    margin-top: 20px;   /* Add space above the image */
+    margin-top: 0px;   /* Add space above the image */
     margin-bottom: 20px; /* Add space below the image */
+}
 
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-4-text {
+        display:flex;
+        flex-direction: column;
+        background-color: white;      /* Set background color for the nav */
+        margin-top: 40px;   /* Add space above the image */
+        margin-bottom: 20px; /* Add space below the image */
+        font-family: 'Karla Regular';
+    }
+}
+
+.section-4-text h3 {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Markazi Text';
+    margin-top: 0;               /* Remove top margin to tighten spacing */
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-4-text h3 {
+        font-size: 20px;
+        color: black;
+        margin-bottom: 0px;
+        font-family: 'Markazi Text';
+    }
 }
 
 .section-4-pic{
-    max-width: 100%;   /* Set a maximum width for the image */
+    max-width: 80%;   /* Set a maximum width for the image */
     height: auto;       /* Maintain aspect ratio */
-    margin-left: 30px;   /* Add space left to the image */
-    border-radius: 10px; /* Optional: add rounded corners to the image */
+    margin-left: 0px;   /* Add space left to the image */
+    margin-top: 0px;
+    border-radius: 16px; /* Optional: add rounded corners to the image */
     justify-self: center;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .section-4-pic{
+        max-width: 80%;   /* Set a maximum width for the image */
+        height: auto;       /* Maintain aspect ratio */
+        margin-left: 30px;   /* Add space left to the image */
+        border-radius: 10px; /* Optional: add rounded corners to the image */
+        justify-self: center;
+    }
 }
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(1,1fr);
     gap: 20px;
     background-color: white;      /* Set background color for the nav */
     font-size: 12px;
-    margin: 0 20px; /* Center the content */
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        background-color: white;      /* Set background color for the nav */
+        font-size: 12px;
+        margin: 0 20px;
+        text-align: left;
+        padding: 10px 20px;
+    }
+}
+
+.footer-section h4 {
+    color: black;
+    font-family: 'Karla Regular';
 }
 
 .footer-nav-list {
@@ -176,6 +542,7 @@ p {
     justify-content: space-evenly; /* Space out the items evenly */
     background-color: white;      /* Set background color for the nav */
     text-decoration: none;
+    font-family: 'Karla Regular';
 }
 
 .footer-nav-list a {
