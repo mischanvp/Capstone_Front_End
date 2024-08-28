@@ -8,6 +8,89 @@
     max-width: 1200px; /* Set a maximum width */
 }
 
+.nav-header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center align the items */
+    justify-content: space-between; /* Space between the logo and menu items */
+    padding: 10px 20px; /* Add some padding around the navbar */
+    background-color: white; /* Background color for the navbar */
+    position: relative;
+}
+
+.pic-logo {
+    max-width: 30%;   /* Set a maximum width for the image */
+    height: auto; /* Adjust height as needed */
+    /* Optional: adjust width if needed */
+}
+
+/* Navigation list styles */
+.nav-list {
+    display: flex; /* Display as a row by default */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    align-items: center; /* Align items vertically center */
+}
+
+.nav-list.open {
+    max-height: 500px; /* Adjust based on content height */
+    overflow: visible; /* Show content when open */
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 5px; /* Adjust padding for spacing */
+    font-family: 'Karla Regular';
+    font-weight: bold;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.nav-list a:hover {
+    background-color: rgb(73, 94, 87);
+    border-radius: 16px;
+    color: white;
+}
+
+.nav-item-hidden {
+    display: none;
+}
+
+/* Styles for desktop screens */
+@media (min-width: 600px) {
+    .nav-list {
+        flex-direction: row; /* Row direction for desktop */
+    }
+    .nav-list-default {
+        display: none; /* Hidden on desktop */
+    }
+    .nav-item-hidden {
+        display: flex;
+    }
+    .nav-list a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px; /* Adjust padding for spacing */
+        font-family: 'Karla Regular';
+        font-weight: bold;
+        font-size: 14px; /* Adjust font size as needed */
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;      /* Stack sections vertically */
+    gap: 20px;                   /* Add space between sections */
+}
+
+h1 {
+    font-size: 32px;
+    color: #F4CE14;
+    margin: 0;
+    font-family: 'Markazi Text';
+}
+
 .button-1 {
     background-color: rgb(244, 206, 30); /* Light gray background */
     color: black;
@@ -37,70 +120,6 @@
     background-color: rgb(73, 94, 87);
     border-radius: 16px;
     color: white;
-}
-
-.nav-header {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    justify-content: space-evenly; /* Space out the items evenly */
-    background-color: white;      /* Set background color for the nav */
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.nav-list {
-    display: flex;
-    flex-flow: row wrap; /* Wraps along rows when size too small */
-    list-style-type: none;       /* Remove bullet points from the list */
-    justify-content: space-evenly; /* Space out the items evenly */
-    background-color: white;      /* Set background color for the nav */
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.nav-list a {
-    text-decoration: none; /* Not underlining links */
-    color: black;
-    padding: 10px 10px;
-    font-family: 'Karla Regular';
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* Styles for desktop screens */
-@media (min-width: 600px) {
-    .nav-list a {
-        text-decoration: none; /* Not underlining links */
-        color: black;
-        padding: 10px 10px;
-        font-family: 'Karla Regular';
-        font-weight: bold;
-        font-size: 16px;
-    }
-}
-
-.nav-list a:hover {
-    background-color: rgb(73, 94, 87);
-    border-radius: 16px;
-    color: white;
-}
-
-.pic-logo {
-    width: 100%;                 /* Make the image take up 100% of its grid area */
-    height: auto;                /* Maintain the aspect ratio */
-}
-
-main {
-    display: flex;
-    flex-direction: column;      /* Stack sections vertically */
-    gap: 20px;                   /* Add space between sections */
-}
-
-h1 {
-    font-size: 32px;
-    color: #F4CE14;
-    margin: 0;
-    font-family: 'Markazi Text';
 }
 
 /* Styles for desktop screens */
