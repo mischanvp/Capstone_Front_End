@@ -20,7 +20,7 @@ function Footer() {
           <div className="footer-section">
             <h4>Contact</h4>
             <ul class='footer-nav-list'>
-              <li>Adress</li>
+              <li>Address</li>
               <li>Phone Number</li>
               <li>Email</li>
             </ul>
