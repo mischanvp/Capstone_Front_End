@@ -17,6 +17,14 @@
     position: relative;
 }
 
+.burger-icon {
+    display: block;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10; /* Ensure it stays above the nav list */
+}
+
 .pic-logo {
     max-width: 30%;   /* Set a maximum width for the image */
     height: auto; /* Adjust height as needed */
@@ -25,14 +33,22 @@
 
 /* Navigation list styles */
 .nav-list {
-    display: flex; /* Display as a row by default */
+    display: none; /* Display as a row by default */
+    flex-direction: column;
     list-style-type: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    align-items: center; /* Align items vertically center */
+    align-items: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 9;
 }
 
 .nav-list.open {
+    display: flex;
     max-height: 500px; /* Adjust based on content height */
     overflow: visible; /* Show content when open */
 }
@@ -52,20 +68,24 @@
     color: white;
 }
 
-.nav-item-hidden {
-    display: none;
-}
 
 /* Styles for desktop screens */
 @media (min-width: 600px) {
     .nav-list {
+        display: flex; /* Display as a row by default */
         flex-direction: row; /* Row direction for desktop */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        align-items: center; /* Align items vertically center */
+        position: static;
+        box-shadow: none;
+        width: auto; /* Adjust width to fit content */
+    }
+    .burger-icon {
+        display: none; /* Hide burger icon on desktop */
     }
     .nav-list-default {
         display: none; /* Hidden on desktop */
-    }
-    .nav-item-hidden {
-        display: flex;
     }
     .nav-list a {
         text-decoration: none;
