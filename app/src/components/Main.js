@@ -5,9 +5,16 @@ import picFood3 from '../pics/bruchetta.svg'
 import picFood4 from '../pics/lemondessert.jpg'
 import picAbout from '../pics/about.jpg'
 import '../style.css'
+import { useNavigate } from 'react-router-dom';
 
 
 function Main() {
+    const navigate = useNavigate();
+
+    const handleButtonClickBooking = () => {
+        navigate('/booking');
+    };
+
     return (
     <main>
         <section className="section-1">
@@ -15,7 +22,7 @@ function Main() {
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant, focussed on traditional recipes served with a mordern twist.</p>
-                <button className="button-1">Reserve a Table</button>
+                <button className="button-1" onClick={handleButtonClickBooking}>Reserve a Table</button>
             </div>
             <img src={picFood1} alt="Little Lemon Intro" className="section-1-pic"/>
         </section>
