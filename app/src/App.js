@@ -1,7 +1,7 @@
 import './App.css';
 import Header from  './components/Header'
 import Main from  './components/Main'
-import Reserve from  './components/Reserve'
+import BookingPage from  './components/BookingPage'
 import Footer from  './components/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -11,11 +11,11 @@ function App() {
       <BrowserRouter>
         {/* Header and navigation section */}
         <Header />
-        {/* Footer section */}
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/reserve" element={<Reserve />}></Route>
+          <Route path="/booking" element={<BookingPage />}></Route>
         </Routes>
+        {/* Footer section */}
         <Footer />
       </BrowserRouter>
     </div>

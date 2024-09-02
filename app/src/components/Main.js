@@ -15,7 +15,7 @@ function Main() {
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>We are a family owned Mediterranean restaurant, focussed on traditional recipes served with a mordern twist.</p>
-                <button class="button-1">Reserve a Table</button>
+                <button className="button-1">Reserve a Table</button>
             </div>
             <img src={picFood1} alt="Little Lemon Intro" className="section-1-pic"/>
         </section>
@@ -23,7 +23,7 @@ function Main() {
         <section className="section-2">
             <div className="section-2-header">
                 <h2>This week specials!</h2>
-                <button class="button-1">Online Menu</button>
+                <button className="button-1">Online Menu</button>
             </div>
             <div className="section-2-panels">
                 <div className="section-2-panel">

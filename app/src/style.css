@@ -320,7 +320,7 @@ h2 {
     }
 }
 .section-2-panel {
-    background-color: rgba(73, 94, 87, 0.2);  /* Light gray background */
+    background-color: rgba(73, 94, 87, 0.2);
     border-radius: 16px;  /* Rounded corners */
     overflow: hidden;  /* Ensure the image doesn't overflow the rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add a subtle shadow */
