@@ -2,20 +2,18 @@ import { useState } from 'react';
 import '../style.css';
 import '../style_booking.css';
 
-function BookingForm() {
+function BookingForm({ availableTimes, dispatch }) {
 
     const [bookDate, setBookDate] = useState("")
     const [bookTime, setBookTime] = useState("")
     const [bookOccasion, setBookOccasion] = useState("")
     const [bookNGuests, setBookNGuests] = useState("1")
-    const [availableTimes, setAvailableTimes] = useState([
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-    ]);
+
+    const handleDateChange = (e) => {
+        const selectedDate = e.target.value;
+        setBookDate(selectedDate);
+        dispatch({ type: 'update_time', payload: { date: selectedDate } });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault(); /* Prevent default behaviour of reloading page after submitting */
@@ -34,7 +32,7 @@ function BookingForm() {
                     type="date"
                     id="res-date"
                     value={bookDate}
-                    onChange = {(e) => setBookDate(e.target.value)}
+                    onChange = {handleDateChange}
                 />
                 <label htmlFor="res-time">Choose a Time</label>
                 <select
@@ -71,7 +69,7 @@ function BookingForm() {
                 <input
                     disabled={!bookDate}
                     type="submit"
-                    value="Make Your reservation"
+                    value="Make your Reservation"
                 />
             </form>
         </div>

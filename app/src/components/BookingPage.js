@@ -1,9 +1,11 @@
 import '../style.css';
 import BookingForm from  './BookingForm';
 
-function BookingPage() {
+function BookingPage({ availableTimes, dispatch }) {
     return (
-        <BookingForm />
+        <>
+            <BookingForm availableTimes={availableTimes} dispatch={dispatch}/>
+        </>
     );
 }
 
