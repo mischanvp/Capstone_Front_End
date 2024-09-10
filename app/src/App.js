@@ -6,7 +6,7 @@ import Footer from  './components/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import React, { useReducer }  from 'react'
 
-function initializeTimes() {
+export function initializeTimes() {
   return [
     "17:00",
     "18:00",
@@ -17,7 +17,7 @@ function initializeTimes() {
   ]
 }
 
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
   if (action.payload.date === '2024-09-10') {
     /* console.log('updated'); */
     return ['14:00', '17:00'];
