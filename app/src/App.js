@@ -4,30 +4,32 @@ import Main from  './components/Main'
 import BookingPage from  './components/BookingPage'
 import Footer from  './components/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import React, { useReducer }  from 'react'
+import React, { useReducer, useEffect }  from 'react'
+import { fetchAPI } from './components/Api';
 
-export function initializeTimes() {
-  return [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00"
-  ]
+function initializeTimes() {
+  const today = new Date();
+  return fetchAPI(today);
 }
 
-export function updateTimes(state, action) {
-  if (action.payload.date === '2024-09-10') {
-    /* console.log('updated'); */
-    return ['14:00', '17:00'];
-  } else{
-    return initializeTimes();
+function updateTimes(state, action) {
+  if (action.type === 'update_time' && action.payload.date) {
+    const date = new Date(action.payload.date);
+    return fetchAPI(date);
+  } else {
+    return state;
   }
 }
 
 function App() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+
+  useEffect(() => {
+    const loadInitialTimes = async () => {
+      dispatch({ type: 'update_time', payload: { date: new Date() } });
+    };
+    loadInitialTimes();
+  }, []);
 
   return (
     <div className="site-container">
