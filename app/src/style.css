@@ -594,3 +594,28 @@ h2 {
     border-radius: 16px;
     color: white;
 }
+
+.confirmed-booking{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+}
+
+.confirmed-booking a {
+    background-color: rgb(244, 206, 30);
+    color: black;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.confirmed-booking p:last-of-type {
+    margin-bottom: 20px;
+}
+
+.confirmed-booking a:hover {
+    background-color: rgb(73, 94, 87);
+    border-radius: 16px;
+    color: white;
+}

@@ -2,10 +2,11 @@ import './App.css';
 import Header from  './components/Header'
 import Main from  './components/Main'
 import BookingPage from  './components/BookingPage'
+import ConfirmedBooking from  './components/ConfirmedBooking'
 import Footer from  './components/Footer'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {Routes, Route, useNavigate} from 'react-router-dom'
 import React, { useReducer, useEffect }  from 'react'
-import { fetchAPI } from './components/Api';
+import { fetchAPI, submitAPI } from './components/Api';
 
 function initializeTimes() {
   const today = new Date();
@@ -21,8 +22,11 @@ function updateTimes(state, action) {
   }
 }
 
+
 function App() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadInitialTimes = async () => {
@@ -33,16 +37,26 @@ function App() {
 
   return (
     <div className="site-container">
-      <BrowserRouter>
-        {/* Header and navigation section */}
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />}></Route>
-        </Routes>
-        {/* Footer section */}
-        <Footer />
-      </BrowserRouter>
+      {/* Header and navigation section */}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/booking" element={<BookingPage
+                                          availableTimes={availableTimes}
+                                          dispatch={dispatch}
+                                          submitForm={async (formData) => {
+                                            const success = await submitAPI(formData);
+                                            if (success) {
+                                              navigate('/confirmed'); // Use navigate function to redirect
+                                            } else {
+                                              alert('Submission failed. Please try again.');
+                                            }
+                                          }}
+                                            />}></Route>
+        <Route path="/confirmed" element={<ConfirmedBooking />}></Route>
+      </Routes>
+      {/* Footer section */}
+      <Footer />
     </div>
   );
 }

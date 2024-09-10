@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../style.css';
 import '../style_booking.css';
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
 
     const [bookDate, setBookDate] = useState("")
     const [bookTime, setBookTime] = useState("")
@@ -15,13 +15,21 @@ function BookingForm({ availableTimes, dispatch }) {
         dispatch({ type: 'update_time', payload: { date: selectedDate } });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); /* Prevent default behaviour of reloading page after submitting */
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = {
+            date: bookDate,
+            time: bookTime,
+            occasion: bookOccasion,
+            guests: bookNGuests
+        };
+        await submitForm(formData);
+
         setBookDate(''); /* Setting to empty after submitting */
         setBookTime(availableTimes[0]); /* Setting to default after submitting */
         setBookOccasion('Date'); /* Setting to default after submitting */
         setBookNGuests('1'); /* Setting to default after submitting */
-        /* console.log("joe we did it!"); */
+        console.log('done')
     };
 
     return (
