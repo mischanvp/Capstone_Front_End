@@ -24,12 +24,6 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             guests: bookNGuests
         };
         await submitForm(formData);
-
-        setBookDate(''); /* Setting to empty after submitting */
-        setBookTime(availableTimes[0]); /* Setting to default after submitting */
-        setBookOccasion('Date'); /* Setting to default after submitting */
-        setBookNGuests('1'); /* Setting to default after submitting */
-        console.log('done')
     };
 
     return (

@@ -8,12 +8,12 @@ import {Routes, Route, useNavigate} from 'react-router-dom'
 import React, { useReducer, useEffect }  from 'react'
 import { fetchAPI, submitAPI } from './components/Api';
 
-function initializeTimes() {
+export function initializeTimes() {
   const today = new Date();
   return fetchAPI(today);
 }
 
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
   if (action.type === 'update_time' && action.payload.date) {
     const date = new Date(action.payload.date);
     return fetchAPI(date);
