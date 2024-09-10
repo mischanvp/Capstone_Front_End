@@ -40,11 +40,15 @@ function BookingForm({ availableTimes, dispatch }) {
                     value={bookTime}
                     onChange = {(e) => setBookTime(e.target.value)}
                 >
-                    {availableTimes.map((time, index) => (
-                        <option key={index}>
+                    {availableTimes.length > 0 ? (
+                        availableTimes.map((time, index) => (
+                        <option key={index} value={time}>
                             {time}
-                        </option>
-                    ))}
+                            </option>
+                            ))
+                        ) : (
+                        <option>No available times</option>
+                        )}
                 </select>
                 <label htmlFor="guests">Number of Guests</label>
                 <input
