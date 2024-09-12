@@ -90,7 +90,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     <option>Anniversary</option>
                 </select>
                 <input
-                    disabled={!bookDate}
+                    disabled={!bookDate || !bookTime}
                     type="submit"
                     value="Make your Reservation"
                 />
