@@ -51,6 +51,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     id="res-date"
                     value={bookDate}
                     onChange = {handleDateChange}
+                    aria-label="Click to select a Data"
                 />
                 {dateError && <p className="error">{dateError}</p>}
                 <label htmlFor="res-time">Choose a Time</label>
@@ -78,6 +79,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     id="guests"
                     value={bookNGuests}
                     onChange = {(e) => setBookNGuests(e.target.value)}
+                    aria-label="Click to add number of Guests"
                 />
                 <label htmlFor="occasion">Occasion</label>
                 <select
@@ -93,6 +95,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     disabled={!bookDate || !bookTime}
                     type="submit"
                     value="Make your Reservation"
+                    aria-label="On Click to Submit"
                 />
             </form>
         </div>
