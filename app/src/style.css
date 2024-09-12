@@ -619,3 +619,9 @@ h2 {
     border-radius: 16px;
     color: white;
 }
+
+.error {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 0px;
+}

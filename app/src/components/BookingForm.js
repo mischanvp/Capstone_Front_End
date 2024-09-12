@@ -8,15 +8,31 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     const [bookTime, setBookTime] = useState("")
     const [bookOccasion, setBookOccasion] = useState("")
     const [bookNGuests, setBookNGuests] = useState("1")
+    const [dateError, setDateError] = useState("")
+
+    /* check that the selected date is not in the past; if it is return true */
+    const handlePastDate = (e) => {
+        const selectedDate = new Date(e);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        return selectedDate < today;
+    };
 
     const handleDateChange = (e) => {
         const selectedDate = e.target.value;
-        setBookDate(selectedDate);
-        dispatch({ type: 'update_time', payload: { date: selectedDate } });
+        if (handlePastDate(selectedDate)){
+            setDateError('Selected Date cannot be in the past')
+            setBookDate('')
+        } else {
+            setDateError('')
+            setBookDate(selectedDate);
+            dispatch({ type: 'update_time', payload: { date: selectedDate } });
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         const formData = {
             date: bookDate,
             time: bookTime,
@@ -36,6 +52,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                     value={bookDate}
                     onChange = {handleDateChange}
                 />
+                {dateError && <p className="error">{dateError}</p>}
                 <label htmlFor="res-time">Choose a Time</label>
                 <select
                     id="res-time"
